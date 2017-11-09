@@ -9,8 +9,7 @@ import { AuthService } from '../../auth/auth.service';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  constructor(private http: Http,
-              private dataStorageService: DataStorageService,
+  constructor(private dataStorageService: DataStorageService,
               private authService: AuthService) {}
 
   onSaveData() {
@@ -25,7 +24,11 @@ export class HeaderComponent {
     this.dataStorageService.getRecipes();
   }
 
-  onLogOut() {
+  onLogout() {
     this.authService.logout();
+  }
+
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
   }
 }
