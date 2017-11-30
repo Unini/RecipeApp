@@ -1,4 +1,4 @@
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
